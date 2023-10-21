@@ -21,10 +21,10 @@ function Card({ imageUrl, title, price, id, onPlus, isAdded, setFavorite, favori
       <div className={styles.favorite} onClick={onFavorite}>
         <img src={isFavorite ? "/img/heart2.svg" : "/img/heart1.svg"} alt="unliked" />
       </div>
-      <img width={133} height={112} src={imageUrl} alt="Sneakers" />
+      <img width={133} height={112} src={imageUrl} alt="Sneakers" className='mb-[20px] mx-auto' />
       <h5>{title}</h5>
-      <div className="d-flex justify-between align-center">
-        <div className="d-flex flex-column">
+      <div className="flex justify-between items-center">
+        <div className="flex flex-col">
           <span>Cena</span>
           <b>{price} pln.</b>
         </div>

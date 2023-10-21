@@ -1,4 +1,6 @@
-const Drawer = ({ onClose, onRemove, items = [] }) => {
+const Drawer = ({ onClose, onRemove, items = [], totalPrice }) => {
+
+  const tax = totalPrice * 0.05;
 
   return (
     <div className="overlay">
@@ -40,12 +42,12 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
             <li>
               <span>Do zapłaty:</span>
               <div></div>
-              <b>137 pln.</b>
+              <b>{totalPrice + tax} pln.</b>
             </li>
             <li>
               <span>Podatek 5%:</span>
               <div></div>
-              <b>7 pln.</b>
+              <b>{tax} pln.</b>
             </li>
           </ul>
 
