@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import 'macro-css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import FavoritesPage from './Favorites';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
   {
     path: '/favorites',
     element: <FavoritesPage />,
+  },
+  {
+    path: '/signin',
+    element: <SignIn />,
+  },
+  {
+    path: '/signup',
+    element: <SignUp />,
   },
 ]);
 

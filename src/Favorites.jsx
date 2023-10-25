@@ -60,6 +60,9 @@ const FavoritesPage = () => {
           <h1 className="cut-text text-3xl font-bold">Мои закладки</h1>
         </div>
       </div>
+      <div className='empty'>
+      <img src="/img/out-of-stock.png" alt="empty icon" />
+      </div>
     </div>
   );
 };
