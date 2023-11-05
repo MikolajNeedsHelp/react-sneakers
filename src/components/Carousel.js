@@ -15,16 +15,24 @@ const CarouselElement = () => {
       <div className='rounded-xl overflow-hidden'>
         <Carousel autoplay>
           <div>
-            <h3 style={contentStyle}>1</h3>
+            <h3 style={contentStyle}>
+            <img src="/img/slider/s1.png" alt="empty icon" />
+            </h3>
           </div>
           <div>
-            <h3 style={contentStyle}>2</h3>
+            <h3 style={contentStyle}>
+            <img src="/img/slider/s2.jpg" alt="empty icon" />
+            </h3>
           </div>
           <div>
-            <h3 style={contentStyle}>3</h3>
+            <h3 style={contentStyle}>
+            <img src="/img/slider/s3.jpg" alt="empty icon" />
+            </h3>
           </div>
           <div>
-            <h3 style={contentStyle}>4</h3>
+            <h3 style={contentStyle}>
+            <img src="/img/slider/s4.jpg" alt="empty icon" />
+            </h3>
           </div>
         </Carousel>
       </div>

@@ -50,18 +50,21 @@ const FavoritesPage = () => {
         />
       )}
       <Header totalPrice={totalPrice} onClickCart={() => setCartOpened(true)} />
-      <div className="content p-40">
+      <div className="content p-10">
         <div className="flex items-center gap-3">
           <Link to={'/'}>
             <div className="p-2 border-zinc-300 border-[2px] w-7 h-7 flex items-center justify-center rounded-lg">
               <img src="/img/arrow-back.svg" alt="back" />
             </div>
           </Link>
-          <h1 className="cut-text text-3xl font-bold">Мои закладки</h1>
+          <h1 className="cut-text text-3xl font-bold">My bookmarks</h1>
         </div>
       </div>
       <div className='empty'>
       <img src="/img/out-of-stock.png" alt="empty icon" />
+      </div>
+      <div className='emptyFavorites'>
+      <p>You don't have any bookmarks yet.</p>
       </div>
     </div>
   );

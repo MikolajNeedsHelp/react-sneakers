@@ -75,14 +75,14 @@ function App({children}) {
       )}
       <Header totalPrice={totalPrice} onClickCart={() => setCartOpened(true)} />
       <CarouselElement />
-      <div className="content p-40">
-        <div className="d-flex align-center justify-between mb-40">
+      <div className="content p-10">
+        <div className="flex items-center justify-between mb-10">
           <h1 className="cut-text text-3xl font-bold">
             {searchValue
               ? `Wyszukiwanie na żądanie: "${searchValue}"`
               : 'Wszystkie sneakersy'}
           </h1>
-          <div className="search-block d-flex">
+          <div className="search-block flex">
             <img src="/img/search.svg" alt="search" />
             {searchValue && (
               <img
@@ -101,7 +101,7 @@ function App({children}) {
           </div>
         </div>
 
-        <div className="card-wrapper d-flex flex-wrap">
+        <div className="card-wrapper flex flex-wrap">
           {items.filter((item) =>
             item.title.toLowerCase().includes(searchValue)
           ).length ? (

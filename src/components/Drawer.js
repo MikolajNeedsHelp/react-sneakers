@@ -1,34 +1,43 @@
+import { useEffect } from "react";
+
 const Drawer = ({ onClose, onRemove, items = [], totalPrice }) => {
 
   const tax = totalPrice * 0.05;
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden"
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  },[])
+
   return (
-    <div className="overlay">
+    <div className="overlay overflow-hidden">
       <div className="drawer">
-        <h2 className="d-flex justify-between mb-30">
-          Koszyk
+        <h2 className="flex justify-between mb-5">
+        Shopping cart
           <img
             onClick={onClose}
-            className="removeBtn cu-p"
+            className="removeBtn cursor-pointer "
             src="/img/btn-remove.svg"
             alt="Close"
           />
         </h2>
 
-        <div className="items">
-          {items.map((obj, index) => (
-            <div key={obj.id} className="cartItem d-flex align-center mb-20">
+        <div className="items mt-5">
+          {items.map((obj) => (
+            <div key={obj.id} className="cartItem flex items-center mb-5 gap-3">
               <div
                 style={{ backgroundImage: `url(${obj.imageUrl})` }}
-                className="cartItemImg"
+                className="cartItemImg !w-[50%] h-[70px]"
               ></div>
 
-              <div className="mr-20 flex">
+              <div className="flex flex-col">
                 <p className="mb-5">{obj.title}</p>
                 <b>{obj.price}</b>
               </div>
               <img
-                className="removeBtn"
+                className="removeBtn cursor-pointer"
                 src="/img/btn-remove.svg"
                 onClick={() => onRemove(obj.id)}
                 alt="remove"
@@ -40,12 +49,12 @@ const Drawer = ({ onClose, onRemove, items = [], totalPrice }) => {
         <div className="cartTotalBlock">
           <ul>
             <li>
-              <span>Do zapłaty:</span>
+              <span>To be paid:</span>
               <div></div>
               <b>{totalPrice + tax} pln.</b>
             </li>
             <li>
-              <span>Podatek 5%:</span>
+              <span>Tax 5%:</span>
               <div></div>
               <b>{tax} pln.</b>
             </li>
